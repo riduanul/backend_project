@@ -1,0 +1,29 @@
+Database: products_api
+Objective: To manage product information for an API, the database schema is designed to efficiently handle product details and support various CRUD operations.
+
+Table: Products
+Schema:
+
+id (INT, AUTO_INCREMENT, PRIMARY KEY):
+
+Purpose: Serves as the unique identifier for each product.
+Design Choice: AUTO_INCREMENT ensures that each product gets a unique ID automatically, simplifying data insertion and management. PRIMARY KEY ensures uniqueness and efficient indexing.
+
+name (VARCHAR(255), NOT NULL):
+
+Purpose: Stores the name of the product.
+Design Choice: VARCHAR(255) accommodates a wide range of product names, while NOT NULL ensures that every product has a name.
+description (TEXT):
+
+Purpose: Provides a detailed description of the product.
+Design Choice: TEXT is used because descriptions can be lengthy. It allows for flexible and detailed product information without a size constraint.
+
+price (DECIMAL(10, 2), NOT NULL):
+
+Purpose: Records the price of the product.
+Design Choice: DECIMAL(10, 2) is chosen to accurately represent monetary values with up to 10 digits in total and 2 decimal places, ensuring precise calculations and avoiding rounding errors.
+
+quantity (INT, NOT NULL):
+
+Purpose: Indicates the available stock quantity of the product.
+Design Choice: INT is sufficient for tracking stock levels. NOT NULL ensures that the quantity is always recorded, which is critical for inventory management.
